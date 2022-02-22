@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    /* CORES */
+    --cor-primaria-gradient: #574AE8;
+    --cor-segundaria-gradient: #3EA1DB;
+    --cor-titulo: #1A202C;
+    --cor-texto: #717171;
+    --cor-background-search: #FFFFFF33;
+    --branco: #FFFFFF;
+    --cor-fundo: #F3F5F7;
+
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+header {
+    background-image: linear-gradient(to right, var(--cor-primaria-gradient), var(--cor-segundaria-gradient));
+}
+
+header .container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+header .container h1, header .container p{
+    font-size: 1.5rem;
+    color: var(--branco);
+    display: inline;
+}
+
+header .container p {
+    float: right;
+}
+
+header .container input{
+    width: 100%;
+    max-width: 900px;
+    height: 45px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+
+    margin-top: 60px;
+}
+
+header .container input::placeholder {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+
+    color: var(--cor-background-search);
+
+    padding-left: 3.5rem;
+}
+
+header .container button {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    bottom: 2rem;
+    left: 2.5%;
+}
+
+header .container button img {
+    width: 18px;
+    height: 18px;
+}
+
+main {
+    height: 100%;
+    min-height: 100vh;
+
+    background-color: var(--cor-fundo);
+
+    padding-top: 100px;
+}
+
+main .container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+main .card {
+    border-radius: 5px;
+
+    padding: 20px 25px 25px 24px;
+
+    color: var(--cor-texto);
+    background-color: var(--branco);
+}
+
+main .data-card {
+    font-size: 16px;
+    display: inline;
+}
+
+main #like {
+    float: right;
+}
+
+main .titulo-card {
+    margin-top: 22px;
+    margin-bottom: 8px;
+
+    font-size: 26px;
+    color: var(--cor-titulo);
+}
+
+main .descricao-card {
+    font-size: 18px;
+}
