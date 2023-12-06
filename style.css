@@ -41,3 +41,33 @@ header h1 {
 header h1 span {
     color: #E07B67;
 }
+
+header #input-search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+header #input-search img {
+    position: absolute;
+    left: 20%;
+}
+
+header #search {
+    width: 60%;
+    padding: 16px 64px;
+    
+    background: url(./assets/images/icon-search.svg) no-repeat left;
+    background-position: 24px;
+
+    border-radius: 8px;
+    border: 2px solid var(--dark-40);
+
+    color: var(--dark-60);
+}
+
+header #search:focus-visible {
+    outline: none;
+}
