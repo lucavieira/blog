@@ -56,11 +56,12 @@ header #input-search img {
 }
 
 header #search {
-    width: 60%;
-    padding: 16px 64px;
+    width: 75%;
+    padding: 16px 56px;
     
     background: url(./assets/images/icon-search.svg) no-repeat left;
     background-position: 24px;
+    background-size: 24px;
 
     border-radius: 8px;
     border: 2px solid var(--dark-40);
