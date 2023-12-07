@@ -85,7 +85,27 @@ main {
     align-items: center;
     gap: 40px;
 
-    padding: 80px 0px;
+    padding: 50px 0px;
+}
+
+main #novo-post {
+    padding: 10px;
+
+    cursor: pointer;
+
+    border: 2px solid var(--dark-40);
+    border-radius: 8px;
+    
+    background: var(--dark-20);
+    color: var(--dark-60);
+
+    margin-bottom: 30px;
+
+    transition: border .5s;
+}
+
+main #novo-post:hover {
+    border: 2px solid var(--brand-color);
 }
 
 main .posts {
