@@ -5,6 +5,12 @@ const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', '
 
 newPostButton.addEventListener('click', newPost)
 
+for(let i = 0; i < localStorage.length; i++) {
+    if(localStorage.key(i).includes('Post')) {
+        main.insertAdjacentHTML('beforeend', localStorage.getItem(localStorage.key(i)))
+    }
+}
+
 function like(id) {
     let likeButton = document.getElementById(`${id}`)
     if(likeButton.getAttribute('src') == './assets/images/heart-icon.svg') {
@@ -58,17 +64,23 @@ function newPost() {
     post.appendChild(content)
 
     main.appendChild(post)
+
+    localStorage.setItem(`Post-${heartButton.id}`, post.outerHTML)
 }
 
 function randomID(min=0, max=5000) {
     let listButtons = document.getElementsByClassName('botao-gostei')
     let id = Math.floor(Math.random() * (max - min) + min)
-
-    for(let i = 0; i < listButtons.length; i++) {
-        if(listButtons[i].id != id) {
-            return id
-        } else {
-            randomID()
+    
+    if(listButtons.length == 0) {
+        return 0
+    } else {
+        for(let i = 0; i < listButtons.length; i++) {
+            if(listButtons[i].id != id) {
+                return id
+            } else {
+                randomID()
+            }
         }
     }
 }
