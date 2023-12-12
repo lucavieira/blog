@@ -181,6 +181,7 @@ main .titulo-post {
 }
 
 main .descricao-post {
+    width: calc(100% - 35px);
     font-size: 18px;
     color: var(--dark-50);
     line-height: 32px;

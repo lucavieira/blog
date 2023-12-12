@@ -67,7 +67,6 @@ function newPost() {
 
     information.appendChild(createdData)
     information.appendChild(containerButtons)
-    // information.appendChild(heartButton)
 
     // Conteúdo
     let content = document.createElement('div')
