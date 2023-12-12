@@ -15,7 +15,7 @@ for(let i = 0; i < localStorage.length; i++) {
 
 for(let button = 0; button < heartButtons.length; button++) {
     heartButtons[button].addEventListener('click', () => like(heartButtons[button].id))
-    trashButtons[button].addEventListener('click', () => deletePost(trashButtons[button].id))
+    trashButtons[button].addEventListener('click', () => deletePost(heartButtons[button].id))
 }
 
 function like(id) {
@@ -28,7 +28,8 @@ function like(id) {
 }
 
 function deletePost(id) {
-    console.log(id)
+    localStorage.removeItem(`Post-${id}`)
+    location.reload()
 }
 
 function newPost() {
@@ -57,9 +58,8 @@ function newPost() {
     heartButton.onclick = () => like(heartButton.id)
 
     let deleteButton = document.createElement('img')
-    deleteButton.id = randomID()
     deleteButton.classList.add('botao-deletar')
-    deleteButton.onclick = () => deletePost(deleteButton.id)
+    deleteButton.onclick = () => deletePost(heartButton.id)
     deleteButton.setAttribute('src', './assets/images/trash-icon.svg')
 
     containerButtons.appendChild(heartButton)
