@@ -130,6 +130,8 @@ main .posts:hover {
 main .informacoes {
     display: flex;
     justify-content: space-between;
+
+    position: relative;
 }
 
 main .botao-gostei {
@@ -145,8 +147,23 @@ main .data-publicacao {
     font-family: 'Inter', sans-serif;
 }
 
+main .container-botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+
+    position: absolute;
+    right: 0;
+}
+
 main .botao-gostei {
     cursor: pointer;
+}
+
+main .botao-deletar {
+    cursor: pointer;
+    width: 40px;
 }
 
 main .conteudo {
